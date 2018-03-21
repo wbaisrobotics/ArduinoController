@@ -1,0 +1,6 @@
+PWMMotorController	KEYWORD1
+set	KEYWORD2
+
+Solenoid	KEYWORD1
+forward	KEYWORD2
+reverse	KEYWORD2
