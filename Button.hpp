@@ -1,27 +1,27 @@
 //
-//  Switch.hpp
+//  Button.hpp
 //  
 //
 //  Created by Orian Leitersdorf on 3/22/18.
 //
 
-#ifndef Switch_hpp
-#define Switch_hpp
+#ifndef Button_hpp
+#define Button_hpp
 
 #include <stdio.h>
 
 /*
- Connect the limit switch by
+ Connect the limit Button by
  shorting ground to the input, and then connecting
- that to the NO side of the switch, connecting
+ that to the NO side of the Button, connecting
  the other side to 5V.
  */
-class Switch
+class Button
 {
     
     public:
-        /* Initializes the switch on the pin */
-        Switch (int pin);
+        /* Initializes the Button on the pin */
+        Button (int pin);
         /* Returns true if the button is currently pushed */
         bool isPushed();
         /*
@@ -36,4 +36,4 @@ class Switch
         int _pin;
 };
 
-#endif /* Switch_hpp */
+#endif /* Button_hpp */

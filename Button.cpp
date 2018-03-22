@@ -1,21 +1,21 @@
 //
-//  Switch.cpp
+//  Button.cpp
 //  
 //
 //  Created by Orian Leitersdorf on 3/22/18.
 //
 
-#include "Switch.hpp"
+#include "Button.hpp"
 #include "Arduino.h"
 
-/* Initializes the switch on the pin */
-Switch::Switch (int pin){
+/* Initializes the Button on the pin */
+Button::Button (int pin){
     pinMode (pin, INPUT);
     _pin = pin;
 }
 
 /* Returns true if the button is currently pushed */
-bool Switch::isPushed(){
+bool Button::isPushed(){
     return digitalRead (_pin);
 }
 
@@ -23,7 +23,7 @@ bool Switch::isPushed(){
  Updates and returns true once every time the button is pressed.
  Call periodically for best results.
  */
-bool Switch::isPressed(){
+bool Button::isPressed(){
     
     // Records the prev and current states, then updates
     // the previous state stored to the current state
