@@ -10,5 +10,5 @@ void setup() {
 
 // Send to console the current count of the encoder
 void loop() {
-  Serial.println(encoder.get())
+  Serial.println(encoder.get());
 }

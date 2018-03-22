@@ -55,12 +55,12 @@ void Encoder::reset (){
 
 /* Returns the current state
  of the A pin */
-bool getA(){
+bool Encoder::getA(){
     return digitalRead(_aPin);
 }
 
 /* Returns the current state
  of the B pin */
-bool getB(){
+bool Encoder::getB(){
     return digitalRead(_bPin);
 }
