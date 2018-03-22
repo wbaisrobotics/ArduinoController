@@ -50,7 +50,12 @@ int Encoder::get(){
 
 /* Resets the current count */
 void Encoder::reset (){
-    _count = 0;
+    set(0);
+}
+
+/* Sets the count to a given int */
+void Encoder::set(int newCount){
+    _count = newCount;
 }
 
 /* Returns the current state

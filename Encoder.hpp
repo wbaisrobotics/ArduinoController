@@ -30,6 +30,9 @@ class Encoder
          of the encoder */
         void reset();
     
+        /* Sets the current count */
+        void set (int newCount);
+    
         /* Returns the current state
          of the A pin */
         bool getA();
