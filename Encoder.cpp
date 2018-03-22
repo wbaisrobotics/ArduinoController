@@ -19,17 +19,17 @@ Encoder::Encoder (int aPin, int bPin){
     // Reset the current count
     reset();
     // Set the previous state to what the pin currently is
-    _prevState = digitalRead(_aPin);
+    _prevState = getA();
 }
 
 /* Updates the count by checking the inputs, should be called periodically */
 void Encoder::update(){
     // Reads the current value for the A pin
-    bool aReading = digitalRead (_aPin);
+    bool aReading = getA();
     // If A was false and now is true, rising pulse
     if (_prevState == false && aReading == true){
         // If B is true, rotating clockwise
-        if (digitalRead(_bPin) == true){
+        if (getB() == true){
             _count ++;
         }
         // Else, rotating counter clockwise
@@ -51,4 +51,16 @@ int Encoder::get(){
 /* Resets the current count */
 void Encoder::reset (){
     _count = 0;
+}
+
+/* Returns the current state
+ of the A pin */
+bool getA(){
+    return digitalRead(_aPin);
+}
+
+/* Returns the current state
+ of the B pin */
+bool getB(){
+    return digitalRead(_bPin);
 }

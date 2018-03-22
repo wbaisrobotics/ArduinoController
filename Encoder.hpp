@@ -30,6 +30,14 @@ class Encoder
          of the encoder */
         void reset();
     
+        /* Returns the current state
+         of the A pin */
+        bool getA();
+    
+        /* Returns the current state
+         of the B pin */
+        bool getB();
+    
     private:
         /* The pin for the A signal */
         int _aPin;
