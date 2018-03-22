@@ -23,7 +23,7 @@ Encoder::Encoder (int aPin, int bPin){
 /* Updates the count by checking the inputs, should be called periodically */
 void Encoder::update(){
     // Reads the current value for the A pin
-    bool aReading = digitalRead (_aPin);]
+    bool aReading = digitalRead (_aPin);
     // If the state of A changed, a pulse occoured
     if (aReading != _prevState){
         // If A and B are different, rotating clockwise
