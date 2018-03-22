@@ -9,3 +9,8 @@ Encoder	KEYWORD1
 update	KEYWORD2
 get	KEYWORD2
 reset	KEYWORD2
+
+Switch	KEYWORD1
+isPressed	KEYWORD2
+isPushed	KEYWORD2
+
