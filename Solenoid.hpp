@@ -10,7 +10,6 @@
 #define Solenoid_hpp
 
 #include <stdio.h>
-#include "Arduino.h"
 
 class Solenoid
 {
