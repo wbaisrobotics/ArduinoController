@@ -16,6 +16,8 @@ class RangedEncoder: public Encoder
     
     public:
         RangedEncoder (int aPin, int bPin, int lowerLimit, int upperLimit);
+        void setLowerLimit (int lowerLimit);
+        void setUpperLimit (int upperLimit);
         int get();
     private:
         int _lowerLimit;

@@ -11,6 +11,8 @@ get	KEYWORD2
 reset	KEYWORD2
 
 RangedEncoder	KEYWORD1
+setLowerLimit	KEYWORD2
+setUpperLimit	KEYWORD2
 
 Button	KEYWORD1
 isPressed	KEYWORD2

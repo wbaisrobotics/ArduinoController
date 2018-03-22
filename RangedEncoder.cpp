@@ -10,8 +10,8 @@
 RangedEncoder::RangedEncoder (int aPin, int bPin, int lowerLimit, int upperLimit)
 :Encoder (aPin, bPin)
 {
-    _lowerLimit = lowerLimit;
-    _upperLimit = upperLimit;
+    setLowerLimit(lowerLimit);
+    setUpperLimit(upperLimit);
 }
 
 int RangedEncoder::get(){
@@ -23,4 +23,12 @@ int RangedEncoder::get(){
         Encoder::set(_upperLimit);
     }
     return count;
+}
+
+void RangedEncoder::setLowerLimit (int lowerLimit){
+    _lowerLimit = lowerLimit;
+}
+
+void RangedEncoder::setUpperLimit (int upperLimit){
+    _upperLimit = upperLimit;
 }
