@@ -4,6 +4,8 @@ set	KEYWORD2
 Solenoid	KEYWORD1
 forward	KEYWORD2
 reverse	KEYWORD2
+isForward	KEYWORD2
+isReverse	KEYWORD2
 
 Encoder	KEYWORD1
 update	KEYWORD2

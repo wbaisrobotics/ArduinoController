@@ -24,9 +24,18 @@ class Solenoid
     
         /* Sets the solenoid to the reverse position */
         void reverse();
+    
+        /* Returns true if last set was forward */
+        bool isForward();
+    
+        /* Returns true if last set was reverse */
+        bool isReverse();
+    
     private:
         /* The pin connected to the relay */
         int _pin;
+        /* The last state set */
+        bool _state;
     
 };
 
