@@ -12,7 +12,7 @@
 
 /*
  Connect the limit Button by
- shorting ground to the input, and then connecting
+ shorting ground to the input (using a resistor), and then connecting
  that to the NO side of the Button, connecting
  the other side to 5V.
  */
