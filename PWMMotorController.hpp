@@ -13,11 +13,14 @@
 #include <stdio.h>
 
 #include "Arduino.h"
-#include "Servo.h"
+#include <Servo.h>
 
 /*
 Enables control of PWM enabled
 SpeedController for Arduino
+ 
+ Note: Servo object is only attached when first value is set
+ 
  */
 class PWMMotorController
 {
@@ -34,6 +37,8 @@ class PWMMotorController
         void set (double speed);
     
     private:
+        /* The pin the servo is connected to */
+        int _pin;
         /* The servo object used to send signals */
         Servo _output;
     

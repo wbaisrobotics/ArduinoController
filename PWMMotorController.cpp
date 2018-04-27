@@ -8,13 +8,18 @@
 #include "PWMMotorController.hpp"
 #include "Arduino.h"
 
-/* Creates the Servo object used to communicate */
+/* Stores the pin */
 PWMMotorController::PWMMotorController (int pin){
-    _output.attach(pin);
+    // Store the pin connected to
+    _pin = pin;
 }
 
 /* Sets a speed using the servo as output */
 void PWMMotorController::set(double speed){
-    /* Translates range of [-1 to 1] to [-90 to 90] */
+    // If servo not attached yet, attach
+    if (!_output.attached()){
+        _output.attach(_pin);
+    }
+    /* Translates range of [-1 to 1] to [0 to 180] */
     _output.write (speed * 90 + 90);
 }
